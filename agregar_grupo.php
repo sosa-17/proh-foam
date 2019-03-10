@@ -62,7 +62,6 @@
             <select class="form-control" name="estado">
               <option value="1">Activo</option>
               <option value="0">Inactivo</option>
-              <option value="0">proceso</option>
             </select>
         </div>
         <div class="form-group clearfix">
