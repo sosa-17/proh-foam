@@ -106,13 +106,6 @@ if(isset($_POST['update-pass'])) {
                 <label for="nombre_usuario">Direccion</label>
                 <input type="text" class="form-control" name="direc" value="<?php echo $dat['direccion']; ?>" placeholder="Direccion" required>
             </div>
-
-             <div class="form-group">
-                <label for="nombre_usuario">Telefono</label>
-                <input type="text" class="form-control" name="direc" value="<?php echo $dat['direccion']; ?>" placeholder="Direccion" required>
-            </div>
-
-
             <div class="form-group">
               <label for="level">Rol de usuario</label>
                 <select class="form-control" name="level">
