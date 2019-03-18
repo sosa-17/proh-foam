@@ -57,7 +57,7 @@
     <div class="col-md-3">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-yellow">
-          <i class="glyphicon glyphicon-usd"></i>
+          <i class="glyphicon glyphicon-bookmark"></i>
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_sale['total']; ?></h2>
@@ -126,7 +126,7 @@
            </a>
            </td>
            <td><?php echo remove_junk(ucfirst($recent_sale['date'])); ?></td>
-           <td>$<?php echo remove_junk(first_character($recent_sale['precio'])); ?></td>
+           <td>lps <?php echo remove_junk(first_character($recent_sale['precio'])); ?></td>
         </tr>
 
        <?php endforeach; ?>
@@ -156,7 +156,7 @@
                 <?php endif;?>
                 <?php echo remove_junk(first_character($recent_product['name']));?>
                   <span class="label label-warning pull-right">
-                 $<?php echo (int)$recent_product['precio_venta']; ?>
+                 lps <?php echo (int)$recent_product['precio_venta']; ?>
                   </span>
                 </h4>
                 <span class="list-group-item-text pull-right">
