@@ -2,7 +2,7 @@
   $page_title = 'Agregar grupo';
   require_once('includes/cargar.php');
   // Checkin What level user has permission to view this page
-   page_require_level(2);
+   page_require_level(1);
 ?>
 <?php
   if(isset($_POST['add'])){
@@ -12,10 +12,10 @@
 
    if(find_by_groupName($_POST['group-name']) === false ){
      $session->msg('d','<b>Error!</b> El nombre de grupo realmente existe en la base de datos');
-     redirect('agregar_grupo.php', false);
+     redirect('grupo.php', false);
    }elseif(find_by_groupLevel($_POST['group-level']) === false) {
      $session->msg('d','<b>Error!</b> El nombre de grupo realmente existe en la base de datos ');
-     redirect('agregar_grupo.php', false);
+     redirect('grupo.php', false);
    }
    if(empty($errors)){
            $name = remove_junk($db->escape($_POST['group-name']));
@@ -34,15 +34,17 @@
         } else {
           //failed
           $session->msg('d','Lamentablemente no se pudo crear el grupo!');
-          redirect('agregar_grupo.php', false);
+          redirect('grupo.php', false);
         }
    } else {
      $session->msg("d", $errors);
-      redirect('agregar_grupo.php',false);
+      redirect('grupo.php',false);
    }
  }
 ?>
-<?php include_once('layouts/header.php'); ?>
+<?php 
+include_once('layouts/header.php'); 
+?>
 	<!-- Modal -->
 	<div class="modal fade" id="agregarRol" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
