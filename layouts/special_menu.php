@@ -24,7 +24,4 @@
       <li><a href="administrar_pedido.php">Administrar Pedido</a> </li>
    </ul>
   </li>
-
-  
-  
 </ul>

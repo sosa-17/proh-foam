@@ -9,25 +9,9 @@ include("modal/registro_clientes.php");
 page_require_level(2);
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Sistema Web de Pedidos</title>
-	<meta name="author" content="Obed Alvarado">
-   <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
-	<link rel=icon href='http://obedalvarado.pw/img/logo-icon.png' sizes="32x32" type="image/png">
-  </head>
-  <body>
   
 
-
-    <div class="container">
+<?php include_once('layouts/header.php'); ?>
     	<div class="panel panel-default">
 		<div class="panel-heading">
 		    <strong>
@@ -42,21 +26,21 @@ page_require_level(2);
 			<form class="form-horizontal" role="form" id="datos_pedido">
 				<div class="row">
 				  
-				  <div class="col-md-3">
+				  <div class="col-md-6 col-sm-12 col-lg-3 col-xl-3">
 				  <label for="cliente" class="control-label">Seleccione el Cliente</label>
 					 <select class="cliente form-control" name="cliente" id="cliente" required>
 					</select>
 				  </div>
-					<div class="col-md-2">
+					<div class="col-md-6 col-sm-12 col-lg-3 col-xl-3">
 						<label for="condiciones" class="control-label">Condiciones de pago</label>
 						<input type="text" class="form-control input-sm" id="condiciones" value="Contado" required>
 					</div>
 					
-					<div class="col-md-4">
+					<div class="col-md-6 col-sm-12 col-lg-3 col-xl-3">
 						<label for="comentarios" class="control-label">Comentarios</label>
 						<input type="text" class="form-control input-sm" id="comentarios" placeholder="Comentarios o instruciones especiales">
 					</div>
-					<div class="col-md-3">
+					<div class="col-md-6 col-sm-12 col-lg-3 col-xl-3">
 				  <label for="vendedor" class="control-label">Seleccione el Vendedor</label>
 					 <select class="vendedor form-control" name="vendedor" id="vendedor" required>
 					</select>
@@ -65,7 +49,7 @@ page_require_level(2);
 						
 				
 				<hr>
-				<div class="col-md-12">
+				<div class="col-md-12 col-sm-12 ">
 					<div class="pull-right">
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#nuevoCliente">
 						 <span class="glyphicon glyphicon-plus"></span> Agregar cliente
@@ -119,12 +103,8 @@ page_require_level(2);
 		 </div>
 	</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="js/VentanaCentrada.js"></script>
-	<script type="text/javascript" src="js/clientes.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+<?php include_once('layouts/footer.php'); ?>
+
 	<script>
 		$(document).ready(function(){
 			load(1);
